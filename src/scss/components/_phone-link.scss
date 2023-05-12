@@ -1,0 +1,13 @@
+.phone-link {
+  @include flex-v-center;
+
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--secondary-accent-color);
+
+  &__icon {
+    width: 22px;
+    height: 21px;
+    fill: currentColor;
+  }
+}

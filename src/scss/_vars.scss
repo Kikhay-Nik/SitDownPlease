@@ -5,7 +5,13 @@
   --content-width: 1280px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --grid-gap: 32px;
 
   // colors
   --light-color: #fff;
+  --alabaster-color: #f7f7f7;
+  --text-color: #333;
+  --accent-color: #a65cf0;
+  --secondary-accent-color: #ff862f;
+  --light-text-color: #999;
 }

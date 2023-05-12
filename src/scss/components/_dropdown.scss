@@ -1,0 +1,16 @@
+.dropdown {
+  @include flex-v-center;
+  position: relative;
+
+  &__icon {
+    fill: currentColor;
+  }
+
+
+  &__list {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    opacity: 0;
+  }
+}

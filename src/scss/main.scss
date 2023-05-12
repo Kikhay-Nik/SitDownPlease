@@ -4,6 +4,11 @@
 @import "fonts";
 @import "settings";
 
+// подключения мини-компонентов
+@import "./components/dropdown";
+@import "./components/phone-link";
+
 // подключения компонентов страницы
 @import "./components/header";
+
 
