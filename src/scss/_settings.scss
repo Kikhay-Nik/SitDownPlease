@@ -113,7 +113,20 @@ a {
   gap: var(--grid-gap);
 }
 
+.section-offset {
+  padding-top: var(--section-offset);
+}
+
+.section-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--text-color);
+}
+
 .btn {
+  display: block;
   border-radius: 10px;
   font-weight: 600;
   font-size: 16px;
@@ -125,4 +138,17 @@ a {
     font-weight: 700;
     color: var(--light-color);
   }
+
+  &--stroke {
+    padding: 19px 35px;
+    border: 2px solid var(--accent-color);
+  }
+}
+
+.product-subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  color: var(--text-color);
 }

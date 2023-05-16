@@ -242,7 +242,10 @@ const htmlInclude = () => {
       basepath: '@file'
     }))
     .pipe(typograf({
-      locale: ['ru', 'en-US']
+      locale: ['ru', 'en-US'],
+      safeTags: [
+        ['<no-typography>', '</no-typography>']
+      ],
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
@@ -267,8 +270,8 @@ const watchFiles = () => {
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2}`, {
-      base: buildFolder
-    })
+    base: buildFolder
+  })
     .pipe(rev())
     .pipe(revDel())
     .pipe(dest(buildFolder))

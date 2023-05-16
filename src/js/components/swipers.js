@@ -1,10 +1,7 @@
 import Swiper, {Autoplay, Navigation, Pagination } from 'swiper';
 Swiper.use([Autoplay, Navigation, Pagination]);
 
-// hero-swiper
-const heroSwiper = document.querySelector('.hero__swiper');
-
-const swiper = new Swiper(heroSwiper, {
+const heroSwiper = new Swiper('.hero__swiper', {
   slidesPerView: 1,
   loop: true,
   speed: 1000,
@@ -15,4 +12,17 @@ const swiper = new Swiper(heroSwiper, {
     el: '.hero__swiper-pagination',
     clickable: true,
   }
+});
+
+// special-swiper
+const specialSwiper = new Swiper('.special__swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 32,
+  speed: 1000,
+
+  navigation: {
+    nextEl: '.special__button-next',
+    prevEl: '.special__button-prev',
+  },
+
 });
