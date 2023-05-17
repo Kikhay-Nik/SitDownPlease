@@ -25,20 +25,14 @@
 
 .special-slide {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  border-radius: 10px;
   padding: 30px;
   padding-bottom: 28px;
   width: calc(25.625% - 32px);
   min-height: 511px;
-  background-color: var(--alabaster-color);
 
   &__image {
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 
     img {
       display: block;

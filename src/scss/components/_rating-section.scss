@@ -1,0 +1,17 @@
+.rating {
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__product {
+    grid-column: 3 span;
+  }
+
+  &__more-btn {
+    grid-column: 12 span;
+    margin: 0 auto;
+    padding: 21px 34px;
+  }
+}
