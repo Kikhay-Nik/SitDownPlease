@@ -6,21 +6,6 @@
   &__title {
     margin-bottom: 25px;
   }
-
-  &__swiper-navigination {
-    @include flex-v-center;
-    position: absolute;
-    top: 23px;
-    right: 15px;
-    gap: 13px;
-  }
-
-  &__button-icon {
-    width: 10px;
-    height: 15px;
-    stroke: var(--accent-color);
-    fill: none;
-  }
 }
 
 .special-slide {
@@ -119,28 +104,3 @@
   }
 }
 
-.swiper {
-  &-button-next, &-button-prev {
-    position: static;
-    border: 2px solid var(--accent-color);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-
-    &::after {
-      content: '';
-      font-size: 15px;
-      color: var(--accent-color);
-    }
-
-    &.swiper-button-disabled {
-      border-color: var(--light-text-color);
-      opacity: 1;
-
-      & .special__button-icon {
-        stroke: var(--light-text-color);
-      }
-
-    }
-  }
-}

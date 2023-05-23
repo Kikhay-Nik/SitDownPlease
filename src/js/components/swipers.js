@@ -26,3 +26,16 @@ const specialSwiper = new Swiper('.special__swiper', {
   },
 
 });
+
+// special-swiper
+const usefullSwiper = new Swiper('.usefull__swiper', {
+  slidesPerView: 2,
+  spaceBetween: 32,
+  speed: 1000,
+
+  navigation: {
+    nextEl: '.usefull__button-next',
+    prevEl: '.usefull__button-prev',
+  },
+
+});
