@@ -38,10 +38,52 @@
   }
 }
 
+.login-btn {
+  color: var(--accent-color);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &__icon {
+    & svg {
+      fill: currentColor;
+    }
+  }
+
+  &:focus-visible:not(:hover):not(:active) {
+    background-color: var(--light-accent-color);
+    color: var(--light-color);
+    outline: none;
+  }
+
+  @include mobile-hover {
+    &:hover {
+      color: var(--light-accent-color);
+      outline: none;
+    }
+  }
+
+  &:active {
+    color: var(--dark-accent-color);
+  }
+}
+
 .cart-link {
   @include flex-v-center;
 
   position: relative;
+  color: var(--accent-color);
+  transition: color 0.3s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    bottom: -1px;
+    left: -14px;
+    background-color: var(--light-accent-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 
   &__counter {
     position: absolute;
@@ -58,7 +100,36 @@
     line-height: 100%;
     text-align: center;
     color: var(--light-color);
+    z-index: 2;
     transform: translateY(-50%);
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+
+    & svg {
+      fill: currentColor;
+    }
+  }
+
+  &:focus-visible:not(:hover):not(:active) {
+    outline: none;
+    color: var(--light-color);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  @include mobile-hover {
+    &:hover {
+      color: var(--light-accent-color);
+    }
+  }
+
+  &:active {
+    color: var(--dark-accent-color);
   }
 }
 
@@ -98,6 +169,50 @@
     font-size: 16px;
     line-height: 120%;
     color: var(--accent-color);
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      bottom: 0;
+      background-color: #ebd1ff;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      outline: none;
+      color: var(--dark-accent-color);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        outline: none;
+        color: var(--light-accent-color);
+      }
+    }
+
+    &:active {
+      color: var(--dark-accent-color);
+    }
+
+    &.active .location-dropdown__icon {
+      transform: rotate(-180deg) translateY(-3px);
+    }
+  }
+
+  &__text {
+    z-index: 5;
+  }
+
+  &__icon {
+    z-index: 5;
+    transition: transform 0.3s ease-in-out;
   }
 }
 
@@ -107,9 +222,48 @@
   }
 
   &__link {
+    position: relative;
     font-size: 14px;
     line-height: 100%;
     color: var(--light-text-color);
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: -10px;
+      bottom: 1px;
+      left: -10px;
+      background-color: #ebd1ff;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      outline: none;
+      color: var(--dark-accent-color);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        outline: none;
+        color: var(--accent-color);
+      }
+    }
+
+    &:active {
+      color: var(--dark-accent-color);
+    }
+  }
+
+  &__link-text {
+    position: relative;
+    z-index: 5;
   }
 }
 
@@ -119,9 +273,48 @@
   }
 
   &__link {
+    position: relative;
     font-size: 16px;
     line-height: 22px;
     color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: -10px;
+      bottom: 1px;
+      left: -10px;
+      background-color: #ebd1ff;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      outline: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        outline: none;
+        color: var(--accent-color);
+      }
+    }
+
+    &:active {
+      color: var(--dark-accent-color);
+    }
+
+    &-text {
+      position: relative;
+      z-index: 5;
+    }
   }
 }
 
@@ -145,17 +338,45 @@
   &__input {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    border: 2px solid var(--alabaster-color);
     width: 100%;
-    padding: 21px 0;
+    padding: 20px 0;
     padding-left: 55px;
     padding-right: 32px;
     background-color: var(--alabaster-color);
     font-size: 16px;
     line-height: 120%;
     color: var(--text-color);
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
     &::placeholder {
       color: var(--light-text-color);
+    }
+
+    &:focus-visible {
+      border-color: var(--accent-color);
+      background-color: var(--pink-light);
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        background-color: #eaeaea;
+      }
+    }
+
+    &:active {
+      outline: none;
+    }
+
+  }
+
+  &__arrow {
+    color: var(--accent-color);
+    transition: color 0.3s ease-in-out;
+
+    svg {
+      stroke: currentColor;
     }
   }
 
@@ -168,7 +389,37 @@
     width: 32px;
     height: 32px;
     transform: translateY(-50%);
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      background-color: var(--accent-color);
+      outline: none;
+
+      & .search-form__arrow {
+        color: var(--light-color);
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        background-color: var(--light-accent-color);
+
+        & .search-form__arrow {
+          color: var(--light-color);
+        }
+      }
+    }
+
+    &:active {
+      border-color: var(--dark-accent-color);
+      background-color: var(--dark-accent-color);
+
+      & .search-form__arrow {
+        color: var(--light-color);
+      }
+    }
   }
+
 
   &__dropdown-btn {
     @include flex-all-sb;
@@ -182,11 +433,26 @@
     font-size: 16px;
     line-height: 22px;
     color: var(--accent-color);
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      border-color: var(--accent-color);
+      background-color: var(--pink-light);
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        border-color: var(--accent-color);
+        background-color: var(--light-color);
+      }
+    }
+
+    &:active {
+      border-color: var(--dark-accent-color);
+      background-color: var(--light-color);
+    }
   }
-
-
 }
 
-.page {
-  height: 2000px;
-}
+

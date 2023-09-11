@@ -1,4 +1,9 @@
 /* stylelint-disable */
+@mixin mobile-hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
 
 @mixin for-desktop {
   @media (min-width: (1025px)) {

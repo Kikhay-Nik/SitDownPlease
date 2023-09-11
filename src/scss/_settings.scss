@@ -133,14 +133,58 @@ a {
   line-height: 100%;
 
   &--fill {
-    padding: 22px 30px;
+    padding: 21px 29px;
+    border: 2px solid var(--accent-color);
     background-color: var(--accent-color);
     font-weight: 700;
     color: var(--light-color);
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-color: var(--dark-accent-color);
+      background-color: var(--light-accent-color);
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        background-color: var(--light-accent-color);
+        border-color: var(--light-accent-color);
+        outline: none;
+      }
+    }
+
+    &:active {
+      background-color: var(--dark-accent-color);
+      border-color: var(--dark-accent-color);
+    }
   }
 
   &--stroke {
     padding: 18px 34px;
     border: 2px solid var(--accent-color);
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-color: var(--accent-color);
+      background-color: var(--light-accent-color);
+      color: var(--light-color);
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: var(--light-color);
+        outline: none;
+      }
+    }
+
+    &:active {
+      border-color: var(--dark-accent-color);
+      background-color: var(--dark-accent-color);
+      color: var(--light-color);
+    }
   }
 }

@@ -1,13 +1,47 @@
 .phone-link {
   @include flex-v-center;
 
+  position: relative;
   font-size: 14px;
   line-height: 100%;
   color: var(--secondary-accent-color);
 
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    bottom: 0;
+    background-color: #fff5d1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
   &__icon {
+    z-index: 5;
     width: 22px;
     height: 21px;
     fill: currentColor;
   }
+
+  &__text {
+    z-index: 5;
+  }
+
+  &:focus-visible:not(:hover):not(:active) {
+    outline: none;
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  @include mobile-hover {
+    &:hover {
+      color: #ffbd59;
+    }
+  }
+
+  &:active {
+    color: #bb370e;
+  }
+
 }
