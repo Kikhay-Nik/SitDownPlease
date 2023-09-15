@@ -2,23 +2,10 @@
   padding-bottom: 69px;
 
   &__content {
-    background-position: right;
-    background-size: 624px 383px;
-    background-repeat: no-repeat;
     background-image: url(../img/feedback-bg.png);
-  }
-
-  &__tooltip {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-  }
-
-  &__tooltip-icon {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    fill: var(--secondary-accent-color);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 624px 383px;
   }
 
   &__form {
@@ -26,7 +13,30 @@
   }
 }
 
+.js-tooltip {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+
+  &__icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    fill: var(--secondary-accent-color);
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    & .js-tooltip__icon {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}
+
 .feedback-form {
+  font-weight: 200;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,6 +66,16 @@
     border-radius: 10px;
     background-color: var(--alabaster-color);
 
+    &:focus-visible:not(:hover) {
+      background-color: var(--pink-light);
+      outline: 1px solid var(--accent-color);
+    }
+
+    &:hover {
+      background-color: #eaeaea;
+      outline: none;
+    }
+
     &::placeholder {
       font-size: 16px;
       line-height: 40px;
@@ -75,6 +95,23 @@
     line-height: 19px;
     color: var(--accent-color);
     text-decoration: underline;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      color: var(--secondary-accent-color);
+      transform: scale(1.02);
+    }
+
+    @include mobile-hover {
+      &:hover {
+        color: var(--light-accent-color);
+      }
+    }
+
+    &:active {
+      color: var(--dark-accent-color);
+    }
   }
 
   &__checkbox-wrapper {
@@ -93,6 +130,22 @@
     border: 1px solid var(--light-text-color);
     background-color: transparent;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      border-color: var(--secondary-accent-color);
+      outline: none;
+    }
+
+    &:focus + .custom-checkbox__content::before {
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        border-color: var(--accent-color);
+        background-color: var(--light-accent-color);
+      }
+    }
 
     &:checked {
       border-color: var(--accent-color);
@@ -116,7 +169,7 @@
     &::after {
       width: 14px;
       height: 14px;
-      background-image: url(../img/light-check.svg);
+      background-image: url("../img/light-check.svg");
       top: 50%;
       transform: translateY(-50%);
       transition-delay: 0.2s;
@@ -124,11 +177,7 @@
   }
 }
 
-.custom-checkbox__field:focus+.custom-checkbox__content::before {
-  outline: none;
-}
-
-.tippy-box[data-theme~='Accent'] {
+.tippy-box[data-theme~="Accent"] {
   padding: 10px;
   border-radius: 10px;
   background-color: var(--accent-color);
@@ -139,10 +188,10 @@
   color: var(--light-color);
 }
 
-.tippy-box[data-placement^=top]>.tippy-arrow:before {
+.tippy-box[data-placement^="top"] > .tippy-arrow::before {
   border-top-color: var(--accent-color);
 }
 
-.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
   border-bottom-color: var(--accent-color);
 }

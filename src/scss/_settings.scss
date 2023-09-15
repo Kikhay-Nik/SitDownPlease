@@ -163,7 +163,7 @@ a {
   &--stroke {
     padding: 18px 34px;
     border: 2px solid var(--accent-color);
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:focus-visible:not(:hover):not(:active) {
       border-color: var(--accent-color);

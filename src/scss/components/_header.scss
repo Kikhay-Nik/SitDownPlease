@@ -321,7 +321,7 @@
 .search-form {
   @include flex-v-center;
 
-  &__label {
+  &__wrapp {
     position: relative;
     width: 100%;
   }
@@ -340,7 +340,7 @@
     border-bottom-left-radius: 10px;
     border: 2px solid var(--alabaster-color);
     width: 100%;
-    padding: 20px 0;
+    padding: 18px 0;
     padding-left: 55px;
     padding-right: 32px;
     background-color: var(--alabaster-color);
@@ -371,15 +371,6 @@
 
   }
 
-  &__arrow {
-    color: var(--accent-color);
-    transition: color 0.3s ease-in-out;
-
-    svg {
-      stroke: currentColor;
-    }
-  }
-
   &__btn {
     position: absolute;
     top: 50%;
@@ -391,20 +382,29 @@
     transform: translateY(-50%);
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
+    &-icon {
+      color: var(--accent-color);
+      transition: color 0.3s ease-in-out;
+
+      svg {
+        stroke: currentColor;
+      }
+    }
+
     &:focus-visible {
-      background-color: var(--accent-color);
+      background-color: var(--light-accent-color);
       outline: none;
 
-      & .search-form__arrow {
+      & .search-form__btn-icon {
         color: var(--light-color);
       }
     }
 
     @include mobile-hover {
       &:hover {
-        background-color: var(--light-accent-color);
+        background-color: var(--accent-color);
 
-        & .search-form__arrow {
+        & .search-form__btn-icon {
           color: var(--light-color);
         }
       }
@@ -414,7 +414,7 @@
       border-color: var(--dark-accent-color);
       background-color: var(--dark-accent-color);
 
-      & .search-form__arrow {
+      & .search-form__btn-icon {
         color: var(--light-color);
       }
     }
