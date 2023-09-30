@@ -1,0 +1,189 @@
+.choices {
+  margin: 0;
+
+  &__inner {
+    min-height: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    color: var(--accent-color);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &__list--single {
+    padding: 0;
+  }
+
+  &__item.is-selected {
+    display: none;
+  }
+
+  &[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+}
+
+.choices[data-type*="select-one"]::after {
+  top: 45%;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  border-width: 0 1px 1px 0;
+  border-color: var(--accent-color);
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.choices[data-type*="select-one"].is-open::after {
+  top: 50%;
+  margin: 0;
+  border-width: 0 1px 1px 0;
+  border-color: var(--accent-color);
+  transform: translateY(-45%) rotate(-135deg);
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  top: calc(100% + 7px);
+  border: 2px solid var(--light-grey-color);
+  word-break: normal;
+  z-index: 10;
+}
+
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+  border-color: var(--light-grey-color);
+  border-radius: 0;
+}
+
+.choices__list--dropdown .choices__list,
+.choices__list[aria-expanded] .choices__list {
+  overflow: initial;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 10px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: var(--light-color);
+  color: var(--accent-color);
+}
+
+.location-dropdown {
+  & .choices {
+    min-width: 85px;
+
+    &:focus-visible:not(:hover):not(:active) {
+      outline: none;
+
+      & .choices__inner {
+        background-color: var(--pink-violet-color);
+        color: var(--dark-accent-color);
+      }
+
+      &.choices[data-type*="select-one"]::after {
+        border-color: var(--dark-accent-color);
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        & .choices__inner {
+          color: var(--light-accent-color);
+        }
+
+        &.choices[data-type*="select-one"]::after {
+          border-color: var(--light-accent-color);
+        }
+      }
+    }
+
+    &:active {
+      & .choices__inner {
+        color: var(--dark-accent-color);
+      }
+
+      &.choices[data-type*="select-one"]::after {
+        border-color: var(--dark-accent-color);
+      }
+    }
+    &__inner {
+      padding-right: 28px;
+    }
+
+    &__item--choices {
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+}
+
+.category-dropdown {
+  & .choices {
+    min-width: 300px;
+    border: 2px solid var(--light-grey-color);
+    border-radius: 0 10px 10px 0;
+
+    &[data-type*="select-one"] .choices__inner {
+      padding: 19px 32px;
+    }
+
+    &::after {
+      top: 50%;
+      right: 34px;
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      border-color: var(--accent-color);
+      background-color: var(--pink-light);
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        border-color: var(--accent-color);
+      }
+    }
+
+    &:active {
+      border-color: var(--dark-accent-color);
+    }
+
+    &.is-open {
+      border-color: var(--light-grey-color);
+      background-color: var(--light-color);
+    }
+
+    &__list--dropdown, &__list[aria-expanded] {
+      top: calc(100% + 2px);
+    }
+
+    & .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 195px;
+      padding: 22px 30px;
+    }
+
+    &__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+      padding: 0;
+
+      &:not(:nth-child(6n)) {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

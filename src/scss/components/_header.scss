@@ -145,7 +145,7 @@
   }
 
   &__location-dropdown {
-    margin-right: 34px;
+    margin-right: 22px;
   }
 
   &__nav {
@@ -155,64 +155,14 @@
 }
 
 .location-dropdown {
+  @include flex-v-center;
+  min-width: 190px;
+
   &__descr {
     margin-right: 4px;
     font-size: 16px;
     line-height: 120%;
     color: var(--text-color);
-  }
-
-  &__btn {
-    @include flex-v-center;
-
-    gap: 4px;
-    font-size: 16px;
-    line-height: 120%;
-    color: var(--accent-color);
-    transition: color 0.3s ease-in-out;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      bottom: 0;
-      background-color: #ebd1ff;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    &:focus-visible:not(:hover):not(:active) {
-      outline: none;
-      color: var(--dark-accent-color);
-
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    @include mobile-hover {
-      &:hover {
-        outline: none;
-        color: var(--light-accent-color);
-      }
-    }
-
-    &:active {
-      color: var(--dark-accent-color);
-    }
-
-    &.active .location-dropdown__icon {
-      transform: rotate(-180deg) translateY(-3px);
-    }
-  }
-
-  &__text {
-    z-index: 5;
-  }
-
-  &__icon {
-    z-index: 5;
-    transition: transform 0.3s ease-in-out;
   }
 }
 
@@ -235,7 +185,7 @@
       right: -10px;
       bottom: 1px;
       left: -10px;
-      background-color: #ebd1ff;
+      background-color: var(--pink-violet-color);
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
@@ -287,7 +237,7 @@
       right: -10px;
       bottom: 1px;
       left: -10px;
-      background-color: #ebd1ff;
+      background-color: var(--pink-violet-color);
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
@@ -320,6 +270,7 @@
 
 .search-form {
   @include flex-v-center;
+  grid-column: 10span;
 
   &__wrapp {
     position: relative;
@@ -340,7 +291,7 @@
     border-bottom-left-radius: 10px;
     border: 2px solid var(--alabaster-color);
     width: 100%;
-    padding: 18px 0;
+    padding: 19px 0;
     padding-left: 55px;
     padding-right: 32px;
     background-color: var(--alabaster-color);
@@ -419,40 +370,4 @@
       }
     }
   }
-
-
-  &__dropdown-btn {
-    @include flex-all-sb;
-
-    width: 300px;
-    border: 2px solid var(--alabaster-color);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 18px 30px;
-    background-color: var(--light-color);
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--accent-color);
-    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
-    &:focus-visible {
-      border-color: var(--accent-color);
-      background-color: var(--pink-light);
-      outline: none;
-    }
-
-    @include mobile-hover {
-      &:hover {
-        border-color: var(--accent-color);
-        background-color: var(--light-color);
-      }
-    }
-
-    &:active {
-      border-color: var(--dark-accent-color);
-      background-color: var(--light-color);
-    }
-  }
 }
-
-
