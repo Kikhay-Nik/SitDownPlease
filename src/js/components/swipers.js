@@ -1,41 +1,127 @@
-import Swiper, {Autoplay, Navigation, Pagination } from 'swiper';
-Swiper.use([Autoplay, Navigation, Pagination]);
+import Swiper, {
+  Pagination,
+  Autoplay,
+  Keyboard,
+  A11y,
+  Navigation,
+  Grid,
+} from "swiper";
+Swiper.use([Pagination, Autoplay, Keyboard, A11y, Navigation, Grid]);
+import focusVisibleSlide from "../components/focus-visible-slide";
 
-const heroSwiper = new Swiper('.hero__swiper', {
-  slidesPerView: 1,
-  loop: true,
-  speed: 1000,
-  autoplay: {
-    delay: 2500,
-  },
-  pagination: {
-    el: '.hero__swiper-pagination',
-    clickable: true,
-  }
-});
+let swiperHero = document.querySelector(".hero__swiper");
+if (swiperHero) {
+  swiperHero = new Swiper(".hero__swiper", {
+    watchOverflow: true,
+    watchSlidesProgress: true,
+    slideVisibleClass: "ui-slide-visible",
+    slidesPerView: 1,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    a11y: {
+      prevSlideMessage: "Предыдущий слайд",
+      nextSlideMessage: "Следующий слайд",
+      firstSlideMessage: "Это первый слайд",
+      lastSlideMessage: "Это последний слайд",
+      paginationBulletMessage: "Перейти к слайду {{index}}",
+    },
+    pagination: {
+      el: ".hero__swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, "ui-slide-visible");
+      },
+
+      slideChange() {
+        focusVisibleSlide(this.slides, "ui-slide-visible");
+      },
+    },
+  });
+}
 
 // special-swiper
-const specialSwiper = new Swiper('.special__swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 32,
-  speed: 1000,
+let specialSwiper = document.querySelector(".special__swiper");
+if (specialSwiper) {
+  specialSwiper = new Swiper(".special__swiper", {
+    watchOverflow: true,
+    watchSlidesProgress: true,
+    slideVisibleClass: "ui-slide-visible",
+    slidesPerView: "auto",
+    spaceBetween: 32,
+    speed: 1000,
 
-  navigation: {
-    nextEl: '.special__button-next',
-    prevEl: '.special__button-prev',
-  },
+    navigation: {
+      nextEl: ".special__button-next",
+      prevEl: ".special__button-prev",
+    },
+    a11y: {
+      prevSlideMessage: "Предыдущий слайд",
+      nextSlideMessage: "Следующий слайд",
+      firstSlideMessage: "Это первый слайд",
+      lastSlideMessage: "Это последний слайд",
+      paginationBulletMessage: "Перейти к слайду {{index}}",
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, "ui-slide-visible");
+      },
 
-});
+      slideChange() {
+        focusVisibleSlide(this.slides, "ui-slide-visible");
+      },
+    },
+  });
+}
 
-// special-swiper
-const usefullSwiper = new Swiper('.usefull__swiper', {
-  slidesPerView: 2,
-  spaceBetween: 32,
-  speed: 1000,
+// usefull-swiper
+let usefullSwiper = document.querySelector(".usefull__swiper");
+if (usefullSwiper) {
+  usefullSwiper = new Swiper(".usefull__swiper", {
+    watchOverflow: true,
+    watchSlidesProgress: true,
+    slideVisibleClass: "ui-slide-visible",
+    slidesPerView: 2,
+    spaceBetween: 32,
+    speed: 1000,
 
-  navigation: {
-    nextEl: '.usefull__button-next',
-    prevEl: '.usefull__button-prev',
-  },
+    navigation: {
+      nextEl: ".usefull__button-next",
+      prevEl: ".usefull__button-prev",
+    },
+    a11y: {
+      prevSlideMessage: "Предыдущий слайд",
+      nextSlideMessage: "Следующий слайд",
+      firstSlideMessage: "Это первый слайд",
+      lastSlideMessage: "Это последний слайд",
+      paginationBulletMessage: "Перейти к слайду {{index}}",
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    on: {
+      init() {
+        focusVisibleSlide(this.slides, "ui-slide-visible");
+      },
 
-});
+      slideChange() {
+        focusVisibleSlide(this.slides, "ui-slide-visible");
+      },
+    },
+  });
+}
