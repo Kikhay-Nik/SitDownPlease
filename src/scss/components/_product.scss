@@ -8,6 +8,15 @@
     border-radius: 10px;
     min-height: 420px;
     background-color: var(--alabaster-color);
+    animation: linear 0.3s;
+
+    &--hide {
+      display: none;
+    }
+
+    &--visible {
+      animation: toVisible 0.3s;
+    }
   }
 
   &__image {
