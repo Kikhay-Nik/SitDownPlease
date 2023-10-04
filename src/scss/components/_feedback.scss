@@ -17,15 +17,22 @@
   display: inline-block;
   width: 14px;
   height: 14px;
+  border-radius: 50%;
+  color: var(--secondary-accent-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in;
 
   &__icon {
     display: inline-block;
     width: 100%;
     height: 100%;
-    fill: var(--secondary-accent-color);
+    fill: currentColor;
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &:hover,
+  &:active {
+    background-color: var(--secondary-accent-color);
+    color: var(--light-color);
     outline: none;
 
     & .js-tooltip__icon {
@@ -36,11 +43,26 @@
 }
 
 .feedback-form {
-  font-weight: 200;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+
+  &__message {
+    position: absolute;
+    bottom: 38px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--succes-color);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.message-visible {
+      opacity: 1;
+    }
+  }
 
   &__title {
     margin-bottom: 8px;
@@ -55,16 +77,26 @@
   }
 
   &__label {
+    position: relative;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+
+    & .just-validate-error-label {
+      position: absolute;
+      top: -15px;
+      left: 18px;
+      font-size: 12px;
+      color: var(--form-error-color);
+    }
   }
 
   &__input {
     width: 100%;
     padding: 18px 19px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 10px;
     background-color: var(--alabaster-color);
+    transition: background-color 0.3s ease-in-out border-color 0.3s ease-in-out;
 
     &:focus-visible:not(:hover) {
       background-color: var(--pink-light);
@@ -80,6 +112,14 @@
       font-size: 16px;
       line-height: 40px;
       color: var(--light-text-color);
+    }
+
+    &.just-validate-error-field {
+      border-color: var(--form-error-color);
+    }
+
+    &.just-validate-success-field {
+      border-color: var(--succes-color);
     }
   }
 
@@ -115,7 +155,16 @@
   }
 
   &__checkbox-wrapper {
+    position: relative;
     display: flex;
+
+    & .just-validate-error-label {
+      position: absolute;
+      top: -12px;
+      left: 18px;
+      font-size: 12px;
+      color: var(--form-error-color);
+    }
   }
 }
 
@@ -151,6 +200,16 @@
       border-color: var(--accent-color);
       background-color: var(--accent-color);
     }
+
+    &.just-validate-error-field{
+      border-color: var(--form-error-color) ;
+
+      & + .custom-checkbox__content {
+        color: var(--form-error-color);
+      }
+    }
+
+
   }
 
   &__content {
