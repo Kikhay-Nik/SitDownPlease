@@ -1,0 +1,52 @@
+.filter-column {
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &__list {
+    margin-bottom: 90px;
+  }
+}
+
+.filters {
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 29px;
+    }
+  }
+}
+
+.filter {
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--dove-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+
+    &--price {
+      margin-bottom: 4px;
+    }
+
+    &--color {
+      margin-bottom: 7px;
+    }
+
+  }
+
+  &__item {
+    &:not(:last-child) {
+    margin-bottom: 11px;
+    }
+  }
+}

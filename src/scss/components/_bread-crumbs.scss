@@ -1,0 +1,58 @@
+.bread-crumbs {
+  padding-bottom: 30px;
+  background-color: var(--light-color);
+
+  &__item {
+    display: inline;
+    color: var(--accent-color);
+    font-size: 14px;
+
+    & + &::before {
+      content: "/\00a0";
+      color: var(--light-text-color);
+    }
+  }
+
+  &__link {
+    color: var(--light-text-color);
+    position: relative;
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: -10px;
+      bottom: 1px;
+      left: -10px;
+      background-color: var(--pink-violet-color);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:focus-visible:not(:hover):not(:active) {
+      outline: none;
+      color: var(--dark-accent-color);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        outline: none;
+        color: var(--accent-color);
+      }
+    }
+
+    &:active {
+      color: var(--dark-accent-color);
+    }
+  }
+
+  &__link-text {
+    position: relative;
+    z-index: 5;
+  }
+}

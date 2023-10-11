@@ -1,0 +1,48 @@
+.catalog {
+  padding-bottom: 69px;
+
+  &__aside {
+    grid-column: 3 span;
+  }
+
+  &__content {
+    grid-column: 9 span;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--text-color);
+  }
+
+  &-swiper {
+    padding-bottom: 64px;
+
+    & .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 1px;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 32px;
+      height: 32px;
+      padding: 5px;
+      border: 2px solid var(--accent-color);
+      border-radius: 10px;
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 100%;
+      color: var(--accent-color);
+      opacity: 1;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &.swiper-pagination-bullet-active {
+        background-color: var(--accent-color);
+        color: var(--light-color);
+      }
+    }
+  }
+}

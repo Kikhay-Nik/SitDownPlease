@@ -1,0 +1,96 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.range-slider {
+  padding-bottom: 7px;
+
+  &__inner {
+    @include flex-all-sb;
+    margin-bottom: 9px;
+  }
+
+  &__label {
+    @include flex-v-center;
+
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--dove-color);
+  }
+
+  &__text {
+    margin-right: 11px;
+  }
+
+  &__input {
+    max-width: 86px;
+    padding: 4px 13px;
+    border: 1px solid var(--dove-color);
+    border-radius: 2px;
+    line-height: 130%;
+    color: var(--dove-color);
+  }
+}
+
+.noUi {
+  &-target {
+    border-radius: 3px;
+    border: none;
+    background-color: #eaeaea;
+    box-shadow: none;
+  }
+
+  &-horizontal {
+    height: 3px;
+    cursor: pointer;
+
+    & .noUi-handle {
+      top: 0;
+      right: -7px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &-connect {
+    background-color: var(--accent-color);
+  }
+
+  &-handle {
+    border-style: solid;
+    border-width: 0 7.5px 14px 7.5px;
+    border-color: transparent transparent var(--accent-color) transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+
+    &:focus-visible {
+      border-color: transparent transparent var(--dark-accent-color) transparent;
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        border-color: transparent transparent var(--light-accent-color)
+          transparent;
+      }
+    }
+
+    &:active {
+      border-color: transparent transparent var(--dark-accent-color) transparent;
+    }
+  }
+}

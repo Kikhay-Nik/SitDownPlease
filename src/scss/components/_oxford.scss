@@ -21,6 +21,12 @@
     font-size: 60px;
     line-height: 64px;
     color: var(--straw-color);
+
+    &--mini {
+      margin-bottom: 0;
+      font-size: 24px;
+      line-height: 140%;
+    }
   }
 
   &__descr {
@@ -30,9 +36,36 @@
     font-size: 48px;
     line-height: 58px;
     color: var(--light-color);
+
+    &--mini {
+      max-width: 99%;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 124%;
+      color: var(--light-text-color);
+    }
   }
 
   &__link {
     padding: 20px 30px;
+  }
+
+  &-mini {
+    width: 296px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__image-wrapper {
+      font-size: 0;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      padding-bottom: 29px;
+      background-color: var(--text-color);
+    }
   }
 }

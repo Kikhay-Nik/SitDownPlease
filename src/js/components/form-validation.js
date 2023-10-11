@@ -85,16 +85,24 @@ const rules2 = [
 ];
 
 const afterFeedbackForm = () => {
-  const feedbackFormMessage = document.querySelector('.feedback-form__message');
+  const feedbackFormMessage = document.querySelector(".feedback-form__message");
 
   if (feedbackFormMessage) {
-    feedbackFormMessage.classList.add('message-visible');
+    feedbackFormMessage.classList.add("message-visible");
 
     setTimeout(() => {
-    feedbackFormMessage.classList.remove('message-visible');
+      feedbackFormMessage.classList.remove("message-visible");
     }, 2500);
   }
 };
 
-validateForms(".search-form", rules1);
-validateForms(".feedback-form", rules2,  afterFeedbackForm);
+const searchForm = document.querySelector(".search-form");
+const feedbackForm = document.querySelector(".feedback-form");
+
+if (searchForm) {
+  validateForms(".search-form", rules1);
+}
+
+if (feedbackForm) {
+  validateForms(".feedback-form", rules2, afterFeedbackForm);
+}

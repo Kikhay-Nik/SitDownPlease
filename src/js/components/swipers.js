@@ -125,3 +125,27 @@ if (usefullSwiper) {
     },
   });
 }
+
+// catalog swiper
+const catalogSwiper = document.querySelector(".catalog-swiper");
+
+if (catalogSwiper) {
+  const swiper = new Swiper(catalogSwiper, {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    grid: {
+      fill: "row",
+      rows: 3,
+    },
+    spaceBetween: 32,
+    pagination: {
+      el: ".catalog-swiper__pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        console.log(index, className);
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+
+  });
+}

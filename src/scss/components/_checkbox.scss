@@ -1,0 +1,92 @@
+.custom-checkbox {
+  @include custom-checkbox;
+
+  display: inline-flex;
+  align-items: center;
+
+  &__field {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    border: 1px solid var(--light-text-color);
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      border-color: var(--secondary-accent-color);
+      outline: none;
+    }
+
+    &:focus + .custom-checkbox__content::before {
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        border-color: var(--accent-color);
+        background-color: var(--light-accent-color);
+      }
+    }
+
+    &:checked {
+      border-color: var(--accent-color);
+      background-color: var(--accent-color);
+    }
+
+    &.just-validate-error-field{
+      border-color: var(--form-error-color) ;
+
+      & + .custom-checkbox__content {
+        color: var(--form-error-color);
+      }
+    }
+  }
+
+  &__content {
+    margin-right: 5px;
+    padding-left: 22px;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--text-color);
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      border: none;
+    }
+
+    &::after {
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/light-check.svg");
+      top: 50%;
+      transform: translateY(-50%);
+      transition-delay: 0.2s;
+    }
+  }
+
+  &--filter {
+
+    & .custom-checkbox__field {
+      width: 20px;
+      height: 20px;
+    }
+
+    & .custom-checkbox__content {
+      margin: 0;
+      padding-left: 32px;
+      font-size: 16px;
+      line-height: 130%;
+
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
