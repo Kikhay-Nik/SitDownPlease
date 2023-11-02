@@ -1,0 +1,20 @@
+<div class="graph-modal">
+  <div class="graph-modal__container product__modal container" role="dialog" aria-modal="true" data-graph-target="product-modal">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      @include('product-modal-slider.html')
+    </div>
+  </div>
+  <div class="graph-modal__container buy-one-click-modal" role="dialog" aria-modal="true" data-graph-target="buy-one-click-modal">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      @include('buy-one-click.html')
+    </div>
+  </div>
+  <div class="graph-modal__container confirm-modal" role="dialog" aria-modal="true" data-graph-target="confirm-modal">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content confirm-modal__content">
+      @include('confirm-modal.html')
+    </div>
+  </div>
+</div>

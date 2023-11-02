@@ -1,6 +1,6 @@
 .oxford {
   padding: 150px 0;
-  padding-top: 160px;
+  padding-top: 158px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     font-family: "PlayfairDisplay";
     font-weight: 900;
     font-size: 60px;
@@ -48,10 +48,15 @@
 
   &__link {
     padding: 20px 30px;
+
+    &--mini {
+      padding: 0;
+    }
   }
 
   &-mini {
-    width: 296px;
+    width: 100%;
+    padding: 0;
     border-radius: 10px;
     overflow: hidden;
 

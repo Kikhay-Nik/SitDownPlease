@@ -8,34 +8,34 @@ if (rangeSlider) {
     step: 100,
     connect: true,
     handleAttributes: [
-      { 'aria-label': 'уменьшить цену' },
-      { 'aria-label': 'увеличить цену' },
+      { "aria-label": "уменьшить цену" },
+      { "aria-label": "увеличить цену" },
     ],
-    behaviour: 'tap',
+    behaviour: "tap",
     range: {
       min: 0,
       max: 220000,
     },
   });
-}
 
-const inputMin = document.getElementById("input-min");
-const inputMax = document.getElementById("input-max");
-const inputs = [inputMin, inputMax];
+  const inputMin = document.getElementById("input-min");
+  const inputMax = document.getElementById("input-max");
+  const inputs = [inputMin, inputMax];
 
-rangeSlider.noUiSlider.on("update", function (values, handle) {
-  inputs[handle].value = Math.round(values[handle]);
-});
-
-const setRangeValue = (i, value) => {
-  const arr = [null, null];
-
-  arr[i] = value;
-  rangeSlider.noUiSlider.set(arr);
-};
-
-inputs.forEach((el, index) => {
-  el.addEventListener("change", (e) => {
-    setRangeValue(index, e.currentTarget.value);
+  rangeSlider.noUiSlider.on("update", function (values, handle) {
+    inputs[handle].value = Math.round(values[handle]);
   });
-});
+
+  const setRangeValue = (i, value) => {
+    const arr = [null, null];
+
+    arr[i] = value;
+    rangeSlider.noUiSlider.set(arr);
+  };
+
+  inputs.forEach((el, index) => {
+    el.addEventListener("change", (e) => {
+      setRangeValue(index, e.currentTarget.value);
+    });
+  });
+}

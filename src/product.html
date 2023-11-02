@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container site-container--product">
+    @include('partials/header-secondary-page.html')
+    <main class="main">
+      @include('partials/breadCrumbs-product.html')
+      <section class="product">
+        <div class="container product__container">
+          <div class="product__info grid">
+            <div class="product__image-wrapper">
+              @include('partials/slider-with-preview.html')
+            </div>
+            <div class="product__content-wrapper">
+              @include('partials/product-main-info.html')
+            </div>
+          </div>
+          <div class="product__description grid">
+            <div class="product__additional">
+              @include('partials/product-additional.html')
+            </div>
+            <div class="product__specification">
+              @include('partials/product-specification.html')
+            </div>
+          </div>
+        </div>
+      </section>
+      @include('partials/similar-section.html')
+    </main>
+    @include('partials/footer.html')
+    <div class="modal-wrapper">
+      @include('partials/product-modal.html')
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.product-specification {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__term {
+    position: relative;
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+    color: var(--light-text-color);
+    overflow: hidden;
+
+    &::after {
+      content: "................................................................................";
+      position: absolute;
+    }
+  }
+
+  &__detail {
+    margin: 0;
+    width: 47.4%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 180%;
+    color: var(--text-color);
+  }
+}

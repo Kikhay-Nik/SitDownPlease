@@ -1,0 +1,26 @@
+.large-image {
+  & .swiper-slide {
+    font-size: 0;
+  }
+  &__button {
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: -2px;
+    }
+  }
+}
+
+.thumb-image {
+  background-color: var(--light-grey-color);
+
+  & .swiper-slide {
+    font-size: 0;
+  }
+
+  &__button {
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: -2px;
+    }
+  }
+}

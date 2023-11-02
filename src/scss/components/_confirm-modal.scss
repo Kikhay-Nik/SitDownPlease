@@ -1,0 +1,15 @@
+.confirm-modal {
+  max-width: 624px;
+  padding: 118px 75px;
+
+  &__content {
+  @include flex-all-center;
+  }
+}
+
+.confirm {
+  &__image {
+    @include flex-all-center;
+    margin-bottom: 32px;
+  }
+}

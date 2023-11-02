@@ -37,10 +37,30 @@
       line-height: 100%;
       color: var(--accent-color);
       opacity: 1;
-      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
       &.swiper-pagination-bullet-active {
         background-color: var(--accent-color);
+        color: var(--light-color);
+        cursor: not-allowed;
+      }
+
+      &:focus-visible {
+        background-color: var(--light-accent-color);
+        outline: none;
+        color: var(--light-color);
+      }
+
+      @include mobile-hover {
+        &:hover {
+          background-color: var(--accent-color);
+          color: var(--light-color);
+        }
+      }
+
+      &:active {
+        border-color: var(--dark-accent-color);
+        background-color: var(--dark-accent-color);
         color: var(--light-color);
       }
     }

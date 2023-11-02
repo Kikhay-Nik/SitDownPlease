@@ -1,0 +1,38 @@
+.buy-one-click {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    max-width: 375px;
+    margin-bottom: 30px;
+    line-height: 136%;
+  }
+
+  &__form {
+    width: 564px;
+
+    &-label {
+      margin-bottom: 30px;
+    }
+
+    &-input {
+      padding: 17px 15px;
+    }
+
+    &-btn {
+      margin-bottom: 12px;
+      padding: 17px 30px;
+    }
+  }
+}
+
+.buy-one-click-modal.graph-modal__container {
+  width: fit-content;
+  padding: 30px;
+}

@@ -77,94 +77,13 @@
   }
 
   &__label {
-    position: relative;
-    width: 100%;
     margin-bottom: 28px;
-
-    & .just-validate-error-label {
-      position: absolute;
-      top: -15px;
-      left: 18px;
-      font-size: 12px;
-      color: var(--form-error-color);
-    }
-  }
-
-  &__input {
-    width: 100%;
-    padding: 18px 19px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background-color: var(--alabaster-color);
-    transition: background-color 0.3s ease-in-out border-color 0.3s ease-in-out;
-
-    &:focus-visible:not(:hover) {
-      background-color: var(--pink-light);
-      outline: 1px solid var(--accent-color);
-    }
-
-    &:hover {
-      background-color: #eaeaea;
-      outline: none;
-    }
-
-    &::placeholder {
-      font-size: 16px;
-      line-height: 40px;
-      color: var(--light-text-color);
-    }
-
-    &.just-validate-error-field {
-      border-color: var(--form-error-color);
-    }
-
-    &.just-validate-success-field {
-      border-color: var(--succes-color);
-    }
   }
 
   &__btn {
     margin-bottom: 13px;
-    padding: 19px 35px;
-    border: none;
+    padding: 17px 34px;
     font-weight: 600;
-  }
-
-  &__link {
-    font-size: 14px;
-    line-height: 19px;
-    color: var(--accent-color);
-    text-decoration: underline;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-    &:focus-visible {
-      outline: none;
-      color: var(--secondary-accent-color);
-      transform: scale(1.02);
-    }
-
-    @include mobile-hover {
-      &:hover {
-        color: var(--light-accent-color);
-      }
-    }
-
-    &:active {
-      color: var(--dark-accent-color);
-    }
-  }
-
-  &__checkbox-wrapper {
-    position: relative;
-    display: flex;
-
-    & .just-validate-error-label {
-      position: absolute;
-      top: -12px;
-      left: 18px;
-      font-size: 12px;
-      color: var(--form-error-color);
-    }
   }
 }
 

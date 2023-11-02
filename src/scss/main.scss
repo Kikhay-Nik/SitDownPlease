@@ -7,11 +7,16 @@
 // подключения мини-компонентов
 @import "./components/choices";
 @import "./components/phone-link";
-@import "./components/product";
+@import "./components/product-card";
 @import "./components/swiper";
 @import "./components/bread-crumbs";
 @import "./components/checkbox";
 @import "./components/range-slider";
+@import "./components/slider-with-preview";
+@import "./components/product-modal-slider";
+@import "./components/buy-one-click";
+@import "./components/confirm-modal";
+
 
 // подключения компонентов страницы
 @import "./components/header";
@@ -25,3 +30,9 @@
 @import "./components/footer";
 @import "./components/catalog";
 @import "./components/filter-column";
+@import "./components/product";
+@import "./components/product-info";
+@import "./components/product-additional";
+@import "./components/product-specification";
+@import "./components/similar-section";
+

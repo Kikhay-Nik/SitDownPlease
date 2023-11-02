@@ -1,0 +1,26 @@
+.product__modal {
+
+  &.graph-modal__container {
+    width: 100%;
+    max-width: var(--content-width);
+    padding: 0;
+    text-align: center;
+  }
+
+  & .large-image {
+    padding-top: 50px;
+    padding-bottom: 44px;
+  }
+
+  & .thumb-image {
+    max-height: 166px;
+    padding: 20px 50px;
+  }
+
+  & .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+}
