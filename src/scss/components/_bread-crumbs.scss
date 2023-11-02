@@ -11,6 +11,10 @@
       content: "/\00a0";
       color: var(--light-text-color);
     }
+
+    .site-container--cooperation & {
+      margin-right: 4px;
+    }
   }
 
   &__link {
