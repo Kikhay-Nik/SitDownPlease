@@ -1,0 +1,113 @@
+.search-form {
+  @include flex-v-center;
+
+  &__wrapp {
+    position: relative;
+    width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid var(--alabaster-color);
+    width: 100%;
+    padding: 19px 0;
+    padding-left: 55px;
+    padding-right: 32px;
+    background-color: var(--alabaster-color);
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--text-color);
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &::placeholder {
+      color: var(--light-text-color);
+    }
+
+    &:focus-visible {
+      border-color: var(--accent-color);
+      background-color: var(--pink-light);
+      outline: none;
+    }
+
+    @include mobile-hover {
+      &:hover {
+        background-color: #eaeaea;
+      }
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  & .just-validate-error-label {
+    position: absolute;
+    top: 4px;
+    left: 60px;
+    font-size: 12px;
+    color: var(--form-error-color) !important;
+  }
+
+  &__input.just-validate-error-field {
+    border-color: var(--form-error-color);
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &-icon {
+      color: var(--accent-color);
+      transition: color 0.3s ease-in-out;
+
+      svg {
+        stroke: currentColor;
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--light-accent-color);
+      outline: none;
+
+      & .search-form__btn-icon {
+        color: var(--light-color);
+      }
+    }
+
+    @include mobile-hover {
+      &:hover {
+        background-color: var(--accent-color);
+
+        & .search-form__btn-icon {
+          color: var(--light-color);
+        }
+      }
+    }
+
+    &:active {
+      border-color: var(--dark-accent-color);
+      background-color: var(--dark-accent-color);
+
+      & .search-form__btn-icon {
+        color: var(--light-color);
+      }
+    }
+  }
+}

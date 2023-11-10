@@ -139,6 +139,24 @@ const rules3 = [
   },
 ];
 
+const rules4 = [
+  {
+    ruleSelector: ".search-form__input",
+    rules: [
+      {
+        rule: "minLength",
+        value: 3,
+        errorMessage: "Минимальное количество символов 3",
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Введите что хотите найти",
+      },
+    ],
+  },
+];
+
 const afterFeedbackForm = () => {
   const feedbackFormMessage = document.querySelector(".feedback-form__message");
 
@@ -165,6 +183,7 @@ const afterBuyOneClick = () => {
 const searchForm = document.querySelector(".search-form");
 const feedbackForm = document.querySelector(".feedback-form");
 const buyOneClickForm = document.querySelector(".buy-one-click__form");
+const findStoresForm = document.querySelector(".find-stores__form");
 
 if (searchForm) {
   validateForms(".search-form", rules1);
@@ -176,4 +195,8 @@ if (feedbackForm) {
 
 if (buyOneClickForm) {
   validateForms(".buy-one-click__form", rules3, afterBuyOneClick);
+}
+
+if (findStoresForm) {
+  validateForms('.find-stores__form', rules4);
 }

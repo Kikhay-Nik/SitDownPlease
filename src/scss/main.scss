@@ -5,6 +5,7 @@
 @import "settings";
 
 // подключения мини-компонентов
+@import "./components/search-form";
 @import "./components/choices";
 @import "./components/phone-link";
 @import "./components/product-card";
@@ -16,6 +17,7 @@
 @import "./components/product-modal-slider";
 @import "./components/buy-one-click";
 @import "./components/confirm-modal";
+@import "./components/find-stores";
 
 
 // подключения компонентов страницы

@@ -7,3 +7,4 @@ import "./components/smoothScroll";
 import "./components/range-slider";
 import "./components/product-modal";
 import "./components/product-modal-slider";
+import "./components/map";

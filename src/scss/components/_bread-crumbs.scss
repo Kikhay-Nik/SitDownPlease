@@ -2,6 +2,10 @@
   padding-bottom: 30px;
   background-color: var(--light-color);
 
+  .site-container--contacts & {
+    padding-bottom: 31px;
+  }
+
   &__item {
     display: inline;
     color: var(--accent-color);
@@ -13,6 +17,10 @@
     }
 
     .site-container--cooperation & {
+      margin-right: 4px;
+    }
+
+    .site-container--contacts & {
       margin-right: 4px;
     }
   }
