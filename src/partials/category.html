@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="category__title section-title">Топ категории</h2>
     <div class="category__content grid">
-      <div class="category__card product-card category-card category__card--big">
+      <div class="category__card product-card category-card category__card--big category-card--sofas">
         <ul class="category-card__variants list-reset">
           <li class="category-card__variant">
             <a href="#" class="category-card__variant-link">
@@ -26,12 +26,27 @@
             </a>
           </li>
         </ul>
-        <h3 class="category-card__title product-card-subtitle">Диваны</h3>
+        <div class="category-card__title-wrapper">
+          <h3 class="category-card__title product-card-subtitle">Диваны</h3>
+          <a href="#" class="category-card__link category-card__link--mobile category-card__link--sofas inline-link">
+            <span class="inline-link__icon">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
         <div class="category-card__image">
-          <img src="../img/category-1.png" alt="фото белого дивана">
+          <picture>
+            <source media="(max-width:610px)" srcset="img/catgegory-1-mobile.webp, img/category-1-mobile-2x.webp 2x">
+            <source srcset="img/category-1.webp, img/category-1.webp 2x" type="image/webp">
+            <img loading="lazy" src="img/category-1.png,img/category-1-2x.png%202x" alt="фото белого дивана" width="515"
+              height="298">
+          </picture>
         </div>
         <div class="category-card__btn-wrapper">
-          <a href="#" class="category-card__link inline-link">В каталог
+          <a href="#" class="category-card__link category-card__link--sofas inline-link">
+            <span class="category-card__link-text">В каталог</span>
             <span class="inline-link__icon">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -40,7 +55,7 @@
           </a>
         </div>
       </div>
-      <div class="category__card product-card category-card category__card--big">
+      <div class="category__card product-card category-card category__card--big category-card--armchairs">
         <ul class="category-card__variants list-reset">
           <li class="category-card__variant">
             <a href="#" class="category-card__variant-link">
@@ -54,15 +69,31 @@
               <span class="category-card__variant-text">
                 Кресла-кровати
               </span>
-              </a>
+            </a>
           </li>
         </ul>
-        <h3 class="category-card__title product-card-subtitle">Кресла</h3>
+        <div class="category-card__title-wrapper">
+          <h3 class="category-card__title product-card-subtitle">Кресла</h3>
+          <a href="#" class="category-card__link category-card__link--mobile category-card__link--sofas inline-link">
+            <span class="inline-link__icon">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
         <div class="category-card__image">
-          <img src="../img/category-2.png" alt="фото бкресел">
+          <picture>
+            <source media="(max-width:610px)" srcset="img/catgegory-2-mobile.webp, img/category-2-mobile-2x.webp 2x">
+            <source media="(max-width:1240px)" srcset="img/category-2-1024.webp, img/category-2-1024-2x.webp 2x">
+            <source srcset="img/category-2.webp, img/category-2-2x.webp 2x" type="image/webp">
+            <img loading="lazy" src="img/category-2.png,img/category-2-2x.pn%202x" alt="фото кресел" width="515"
+              height="298">
+          </picture>
         </div>
         <div class="category-card__btn-wrapper">
-          <a href="#" class="category-card__link inline-link">В каталог
+          <a href="#" class="category-card__link inline-link">
+            <span class="category-card__link-text">В каталог</span>
             <span class="inline-link__icon">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -71,7 +102,7 @@
           </a>
         </div>
       </div>
-      <div class="category__card product-card category-card">
+      <div class="category__card product-card category-card category-card--beds">
         <ul class="category-card__variants list-reset">
           <li class="category-card__variant">
             <a href="#" class="category-card__variant-link">
@@ -88,12 +119,29 @@
             </a>
           </li>
         </ul>
-        <h3 class="category-card__title product-card-subtitle">Кровати</h3>
+        <div class="category-card__title-wrapper">
+          <h3 class="category-card__title product-card-subtitle">Кровати</h3>
+          <a href="#" class="category-card__link category-card__link--mobile category-card__link--sofas inline-link">
+            <span class="inline-link__icon">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
         <div class="category-card__image">
-          <img src="../img/category-3.png" alt="фото двуспальной кровати">
+          <picture>
+            <source media="(max-width:610px)" srcset="img/catgegory-3-mobile.webp, img/category-3-mobile-2x.webp 2x">
+            <source media="(max-width:768px)" srcset="img/category-3-768.webp, img/category-3-768-2x.webp 2x">
+            <source media="(max-width:1240px)" srcset="img/category-3-1024.webp, img/category-3-1024-2x.webp 2x">
+            <source srcset="img/category-3.webp, img/category-3-2x.webp 2x" type="image/webp">
+            <img loading="lazy" src="img/category-3.png,img/category-3-2x.pn%202x" alt="фото двуспальной кровати"
+              width="306" height="298">
+          </picture>
         </div>
         <div class="category-card__btn-wrapper">
-          <a href="#" class="category-card__link inline-link">В каталог
+          <a href="#" class="category-card__link inline-link">
+            <span class="category-card__link-text">В каталог</span>
             <span class="inline-link__icon">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -102,7 +150,7 @@
           </a>
         </div>
       </div>
-      <div class="category__card product-card category-card">
+      <div class="category__card product-card category-card category-card--dressers">
         <ul class="category-card__variants list-reset">
           <li class="category-card__variant">
             <a href="#" class="category-card__variant-link">
@@ -119,12 +167,28 @@
             </a>
           </li>
         </ul>
-        <h3 class="category-card__title product-card-subtitle">Тумбы и комоды</h3>
+        <div class="category-card__title-wrapper">
+          <h3 class="category-card__title product-card-subtitle">Тумбы и комоды</h3>
+          <a href="#" class="category-card__link category-card__link--mobile category-card__link--sofas inline-link">
+            <span class="inline-link__icon">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
         <div class="category-card__image">
-          <img src="../img/category-4.png" alt="фото комода">
+          <picture>
+            <source media="(max-width:610px)" srcset="img/catgegory-4-mobile.webp, img/category-4-mobile-2x.webp 2x">
+            <source media="(max-width:1240px)" srcset="img/category-4-1024.webp, img/category-4-1024-2x.webp 2x">
+            <source srcset="img/category-4.webp, img/category-4-2x.webp 2x" type="image/webp">
+            <img loading="lazy" src="img/category-4.png,img/category-4-2x.pn%202x" alt="фото комода" width="330"
+              height="298">
+          </picture>
         </div>
         <div class="category-card__btn-wrapper">
-          <a href="#" class="category-card__link inline-link">В каталог
+          <a href="#" class="category-card__link inline-link">
+            <span class="category-card__link-text">В каталог</span>
             <span class="inline-link__icon">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -133,7 +197,7 @@
           </a>
         </div>
       </div>
-      <div class="category__card product-card category-card">
+      <div class="category__card product-card category-card category-card--chairs">
         <ul class="category-card__variants list-reset">
           <li class="category-card__variant">
             <a href="#" class="category-card__variant-link">
@@ -150,12 +214,28 @@
             </a>
           </li>
         </ul>
-        <h3 class="category-card__title product-card-subtitle">Стулья</h3>
+        <div class="category-card__title-wrapper">
+          <h3 class="category-card__title product-card-subtitle">Стулья</h3>
+          <a href="#" class="category-card__link category-card__link--mobile category-card__link--sofas inline-link">
+            <span class="inline-link__icon">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
         <div class="category-card__image">
-          <img src="../img/category-5.png" alt="фото стульев">
+          <picture>
+            <source media="(max-width:610px)" srcset="img/catgegory-5-mobile.webp, img/category-5-mobile-2x.webp 2x">
+            <source media="(max-width:1240px)" srcset="img/category-5-1024.webp, img/category-5-1024-2x.webp 2x">
+            <source srcset="img/category-5.webp, img/category-5-2x.webp 2x" type="image/webp">
+            <img loading="lazy" src="img/category-5.png,img/category-5-2x.pn%202x" alt="фото стульев" width="258"
+              height="296">
+          </picture>
         </div>
         <div class="category-card__btn-wrapper">
-          <a href="#" class="category-card__link inline-link">В каталог
+          <a href="#" class="category-card__link inline-link">
+            <span class="category-card__link-text">В каталог</span>
             <span class="inline-link__icon">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L6 6L1 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

@@ -1,23 +1,26 @@
 <div class="filter">
   <h3 class="filter__title">Скидка</h3>
-  <ul class="filter__list list-reset">
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Более 5 000</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Менее 5 000</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field" checked>
-        <span class="custom-checkbox__content">Не важно</span>
-      </label>
-    </li>
-  </ul>
+  <button class="filter__btn btn-reset">Скидка</button>
+  <div class="filter__dropdown">
+    <ul class="filter__list list-reset filter__list--discount ">
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Более 5 000">
+          <span class="custom-checkbox__content">Более 5 000</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Менее 5 000">
+          <span class="custom-checkbox__content">Менее 5 000</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Без скидки" checked>
+          <span class="custom-checkbox__content">Не важно</span>
+        </label>
+      </li>
+    </ul>
+  </div>
 </div>

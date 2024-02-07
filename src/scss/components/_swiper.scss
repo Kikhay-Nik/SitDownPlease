@@ -66,5 +66,44 @@
   top: 23px;
   right: 15px;
   gap: 13px;
+
+  @include tablet {
+    right: 36px;
+  }
+
+  @include small-tablet {
+    right: 72px;
+  }
+
+  @include big-mobile {
+    right: 22px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+}
+
+.center-swiper-navigination {
+  @include flex-all-sb;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+}
+
+.bottom-swiper-navigination {
+  display: none;
+
+  @include mobile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 16px;
+    padding-top: 22px;
+  }
 }
 

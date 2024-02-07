@@ -16,7 +16,7 @@ if (productImageWrapper) {
       slideIndex = e.currentTarget.dataset.index;
 
       largeSlider.slideTo(slideIndex);
-      thumbSlider.slideTo(slideIndex);
+      slideIndex < 1 ? thumbSlider.slideTo(1) : thumbSlider.slideTo(slideIndex);
     });
   });
 

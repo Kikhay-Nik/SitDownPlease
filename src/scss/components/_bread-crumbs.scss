@@ -2,8 +2,18 @@
   padding-bottom: 30px;
   background-color: var(--light-color);
 
+  @include mobile {
+    display: none;
+  }
+
   .site-container--contacts & {
     padding-bottom: 31px;
+  }
+
+  .site-container--product & {
+    @include tablet {
+      padding-bottom: 32px;
+    }
   }
 
   &__item {

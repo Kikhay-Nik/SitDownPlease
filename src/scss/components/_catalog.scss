@@ -1,25 +1,60 @@
 .catalog {
   padding-bottom: 69px;
 
+  @include small-tablet {
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 11px;
+  }
+
   &__aside {
     grid-column: 3 span;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__content {
     grid-column: 9 span;
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
   }
 
   &__title {
+    display: inline-block;
     margin: 0;
+    margin-right: 17px;
     margin-bottom: 25px;
     font-size: 24px;
     font-weight: 400;
     line-height: 130%;
     color: var(--text-color);
+
+    @include tablet {
+      margin-right: 14px;
+      margin-bottom: 16px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 26px;
+    }
+
+    @include mobile {
+      margin-bottom: 8px;
+    }
   }
 
   &-swiper {
     padding-bottom: 64px;
+
+    & .swiper-slide {
+      box-sizing: border-box;
+    }
 
     & .swiper-pagination-bullets.swiper-pagination-horizontal {
       bottom: 1px;
@@ -37,7 +72,8 @@
       line-height: 100%;
       color: var(--accent-color);
       opacity: 1;
-      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 
       &.swiper-pagination-bullet-active {
         background-color: var(--accent-color);
@@ -64,5 +100,81 @@
         color: var(--light-color);
       }
     }
+  }
+
+  & .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    @include mobile {
+      margin: 0 8px;
+    }
+  }
+}
+.tags {
+  display: inline-block;
+
+  @include tablet {
+    position: relative;
+    top: -5px;
+  }
+
+  @include mobile {
+    top: 0;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &-wrapper {
+    @include flex-v-center;
+    flex-wrap: wrap;
+    gap: 21px;
+
+    @include mobile {
+      gap: 16px 20px;
+
+    }
+  }
+}
+
+.tag {
+  @include flex-v-center;
+  padding: 3px 9px;
+  padding-right: 2px;
+
+  @include tablet {
+    padding-right: 3px;
+  }
+
+  &--category {
+    background-color: var(--lime-color);
+  }
+
+  &--price {
+    background-color: var(--bone-color);
+  }
+
+  &--discount {
+    background-color: var(--pink-violet-color);
+  }
+
+  &--color {
+    background-color: var(--md-grey);
+  }
+
+  &__text {
+    color: var(--dove-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &__btn-close {
+    @include flex-all-center;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__btn-icon {
+    width: 8px;
+    height: 8px;
+    fill: var(--dove-color);
   }
 }

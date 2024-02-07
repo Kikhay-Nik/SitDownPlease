@@ -1,5 +1,4 @@
 .product-specification {
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -9,6 +8,15 @@
   &__item {
     display: flex;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
   }
 
   &__term {
@@ -20,9 +28,19 @@
     color: var(--light-text-color);
     overflow: hidden;
 
+    @include mobile {
+      margin-bottom: 1px;
+      font-size: 10px;
+      line-height: normal;
+    }
+
     &::after {
-      content: "................................................................................";
+      content: "....................................................................................................................................................";
       position: absolute;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -33,5 +51,19 @@
     font-weight: 400;
     line-height: 180%;
     color: var(--text-color);
+
+    @include tablet {
+      width: 53.4%;
+      line-height: 179%;
+    }
+
+    @include small-tablet {
+      width: 35%;
+    }
+
+    @include mobile {
+      width: auto;
+      line-height: normal;
+    }
   }
 }

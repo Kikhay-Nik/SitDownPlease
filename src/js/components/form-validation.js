@@ -173,9 +173,17 @@ const afterBuyOneClick = () => {
   let buyOneClickModal = document.querySelector(
     '[data-graph-target="confirm-modal"]'
   );
+  const buyOneClickForm = document.querySelector(".buy-one-click__form");
+  const succesInputns = buyOneClickForm.querySelectorAll(
+    ".just-validate-success-field"
+  );
   let buyOneClickModalClose = buyOneClickModal.querySelector(".js-modal-close");
 
   buyOneClickModalClose.click();
+
+  succesInputns.forEach((el) => {
+    el.classList.remove("just-validate-success-field");
+  });
 
   new GraphModal().open("confirm-modal");
 };
@@ -198,5 +206,5 @@ if (buyOneClickForm) {
 }
 
 if (findStoresForm) {
-  validateForms('.find-stores__form', rules4);
+  validateForms(".find-stores__form", rules4);
 }

@@ -5,6 +5,10 @@
 
   &__title {
     margin-bottom: 25px;
+
+    @include mobile {
+      margin-bottom: 26px;
+    }
   }
 }
 
@@ -15,11 +19,23 @@
   width: calc(25.625% - 32px);
   min-height: 511px;
 
+  @include mobile {
+    width: auto;
+  }
+
   &__image {
     width: 100%;
     margin-bottom: 18px;
 
-    img {
+    @include mobile {
+      margin-bottom: 16px;
+    }
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    & img {
       display: block;
       margin: 0 auto;
     }
@@ -28,6 +44,10 @@
   &__title {
     margin-bottom: 20px;
     max-width: 225px;
+
+    @include mobile {
+      margin-bottom: 22px;
+    }
   }
 
   &__price {
@@ -54,7 +74,12 @@
     left: 0;
     width: 82px;
     height: 34px;
+
+    @include mobile {
+      top: 30px;
+    }
   }
+
 
   &__btn {
     padding: 18px 34px;
@@ -62,6 +87,19 @@
 
   &--big {
     width: calc(51.3% - 32px);
+
+    @include tablet {
+      width: auto;
+      padding: 30px 20px;
+      padding-bottom: 28px;
+    }
+
+    & .special-slide__image {
+      @include tablet {
+        margin-bottom: 48px;
+      }
+    }
+
   }
 
   &__big-inner {
@@ -69,6 +107,10 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+
+    @include tablet {
+      padding-left: 10px;
+    }
   }
 
   &__big-descr {
@@ -79,6 +121,10 @@
 
   &__big-preview {
     margin-bottom: -2px;
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 

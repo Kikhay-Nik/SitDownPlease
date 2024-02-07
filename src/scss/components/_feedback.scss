@@ -1,15 +1,41 @@
 .feedback {
   padding-bottom: 69px;
 
+  @include tablet {
+    padding-bottom: 68px;
+  }
+
   &__content {
     background-image: url(../img/feedback-bg.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 624px 383px;
+
+    @include tablet {
+      background-image: url(../img/feedback-bg-1024.png);
+      background-size: auto;
+    }
+
+    @include small-tablet {
+      background-image: url(../img/feedback-bg-768.png);
+      background-size: 184px 444px;
+    }
+
+    @include mobile {
+      background-image: none;
+    }
   }
 
   &__form {
     grid-column: 6 span;
+
+    @include tablet {
+      grid-column: 4 span;
+    }
+
+    @include mobile {
+      grid-column: 6 span;
+    }
   }
 }
 
@@ -74,16 +100,28 @@
     font-size: 14px;
     line-height: 19px;
     color: var(--dove-color);
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
 
   &__label {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    padding: 17px;
   }
 
   &__btn {
     margin-bottom: 13px;
     padding: 17px 34px;
     font-weight: 600;
+
+    @include mobile {
+      margin-bottom: 11px;
+    }
   }
 }
 

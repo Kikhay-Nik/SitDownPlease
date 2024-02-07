@@ -1,59 +1,105 @@
 <div class="filter">
   <h3 class="filter__title filter__title--color">Цвет</h3>
-  <ul class="filter__list list-reset">
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Коричневый</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Черный</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Бежевый</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Серый</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Белый</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Синий</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field" checked>
-        <span class="custom-checkbox__content">Оранжевый</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Желтый</span>
-      </label>
-    </li>
-    <li class="filter__item">
-      <label class="custom-checkbox custom-checkbox--filter">
-        <input type="checkbox" class="custom-checkbox__field">
-        <span class="custom-checkbox__content">Зеленый</span>
-      </label>
-    </li>
-  </ul>
+  <button class="filter__btn btn-reset">Цвет</button>
+  <div class="filter__dropdown">
+    <ul class="filter__list list-reset filter__list--color">
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Коричневый">
+          <span class="custom-checkbox__content">Коричневый</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Черный">
+          <span class="custom-checkbox__content">Черный</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Бежевый">
+          <span class="custom-checkbox__content">Бежевый</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Серый">
+          <span class="custom-checkbox__content">Серый</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Белый">
+          <span class="custom-checkbox__content">Белый</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Синий">
+          <span class="custom-checkbox__content">Синий</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Оранжевый" checked>
+          <span class="custom-checkbox__content">Оранжевый</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Желтый">
+          <span class="custom-checkbox__content">Желтый</span>
+        </label>
+      </li>
+      <li class="filter__item">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Зеленый">
+          <span class="custom-checkbox__content">Зеленый</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Красный">
+          <span class="custom-checkbox__content">Красный</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Голубой">
+          <span class="custom-checkbox__content">Голубой</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Фиолетовый">
+          <span class="custom-checkbox__content">Фиолетовый</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Тёмно-синий">
+          <span class="custom-checkbox__content">Тёмно-синий</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Розовый">
+          <span class="custom-checkbox__content">Розовый</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Оливковый">
+          <span class="custom-checkbox__content">Оливковый</span>
+        </label>
+      </li>
+      <li class="filter__item filter__item--hidden">
+        <label class="custom-checkbox custom-checkbox--filter">
+          <input type="checkbox" class="custom-checkbox__field" value="Тёмно-зеленый">
+          <span class="custom-checkbox__content">Тёмно-зеленый</span>
+        </label>
+      </li>
+    </ul>
+    <button class="filter__more-btn btn-reset inline-link">+ ещё 7</button>
+  </div>
 </div>

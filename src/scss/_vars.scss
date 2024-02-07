@@ -4,6 +4,9 @@
   --font-family: "OpenSans", sans-serif;
   --content-width: 1280px;
   --container-offset: 15px;
+  --container-offset-tablet: 36px;
+  --container-offset-small-tablet: 72px;
+  --container-offset-mobile: 12px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --grid-gap: 32px;
   --section-offset: 70px;
@@ -20,8 +23,11 @@
   --dove-color: #666;
   --straw-color: #d5b986;
   --pink-light: #f8efff;
-  --pink-violet-color: #ebd1ff;
   --light-grey-color: #f6f6f6;
   --form-error-color: #ff6972;
   --succes-color: #b8ec64;
+  --lime-color: #daffd1;
+  --bone-color: #fff5d1;
+  --md-grey: #eaeaea;
+  --pink-violet-color: #ebd1ff;
 }

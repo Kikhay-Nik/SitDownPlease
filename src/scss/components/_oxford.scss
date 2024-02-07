@@ -4,13 +4,41 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/collection-bg.jpg);
+  background-image: url(../img/oxford-bg.jpg);
+
+  @include tablet {
+    background-image: url(../img/oxford-bg-1024.jpg);
+  }
+
+  @include small-tablet {
+    background-image: url(../img/oxford-bg-768.jpg);
+
+    & .container {
+      padding: 0 36px;
+    }
+  }
+
+  @include mobile {
+    position: relative;
+    margin-bottom: 92px;
+    padding-top: 32px;
+    padding-bottom: 62px;
+    background-image: url(../img/oxford-bg-mobile.jpg);
+
+    & .container {
+      padding: 0 12px;
+    }
+  }
 
   &__content {
     grid-column: 5 span;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__title {
@@ -21,6 +49,12 @@
     font-size: 60px;
     line-height: 64px;
     color: var(--straw-color);
+
+    @include mobile {
+      margin: 0;
+      font-size: 24px;
+      line-height: 120%;
+    }
 
     &--mini {
       margin-bottom: 0;
@@ -37,6 +71,15 @@
     line-height: 58px;
     color: var(--light-color);
 
+    @include big-mobile {
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 120%;
+    }
+
     &--mini {
       max-width: 99%;
       margin-bottom: 16px;
@@ -49,6 +92,14 @@
   &__link {
     padding: 20px 30px;
 
+    @include mobile {
+      position: absolute;
+      bottom: -92px;
+      left: 12px;
+      width: 296px;
+      text-align: center;
+    }
+
     &--mini {
       padding: 0;
     }
@@ -59,6 +110,10 @@
     padding: 0;
     border-radius: 10px;
     overflow: hidden;
+
+    @include tablet {
+      display: none;
+    }
 
     &__image-wrapper {
       font-size: 0;

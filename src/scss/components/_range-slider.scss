@@ -14,6 +14,12 @@ input[type="number"] {
   &__inner {
     @include flex-all-sb;
     margin-bottom: 9px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 0;
+    }
   }
 
   &__label {
@@ -31,10 +37,16 @@ input[type="number"] {
   &__input {
     max-width: 86px;
     padding: 4px 13px;
-    border: 1px solid var(--dove-color);
+    border: 1px solid var(--light-grey-color);
     border-radius: 2px;
     line-height: 130%;
     color: var(--dove-color);
+  }
+
+  &__slider-line {
+    @include tablet {
+      display: none;
+    }
   }
 }
 

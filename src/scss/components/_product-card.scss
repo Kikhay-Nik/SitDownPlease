@@ -1,25 +1,36 @@
 .product-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    border-radius: 10px;
-    min-height: 420px;
-    background-color: var(--alabaster-color);
-    animation: linear 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-radius: 10px;
+  min-height: 420px;
+  background-color: var(--alabaster-color);
+  animation: linear 0.3s;
 
-    &--hide {
-      display: none;
-    }
+  @include mobile {
+    min-height: 278px;
+    padding: 16px;
+  }
 
-    &--visible {
-      animation: toVisible 0.3s;
-    }
+  &--hide {
+    display: none;
+  }
+
+  &--visible {
+    animation: toVisible 0.3s;
+  }
 
   &__image {
     width: 100%;
     margin-bottom: 16px;
+
+    @include mobile {
+      @include flex-all-center;
+      height: 53px;
+      margin-bottom: 11px;
+    }
 
     img {
       display: block;
@@ -33,6 +44,14 @@
     align-items: flex-start;
     padding: 30px;
     padding-top: 0;
+
+    @include big-mobile {
+      padding-right: 0;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &-subtitle {
@@ -41,10 +60,23 @@
     font-size: 24px;
     line-height: 130%;
     color: var(--text-color);
+
+    @include mobile {
+      .product-card & {
+        font-size: 16px;
+      }
+      &.special-slide__title {
+        font-size: 24px;
+      }
+    }
   }
 
   &__title {
     margin-bottom: 23px;
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__price {
@@ -52,21 +84,36 @@
     font-size: 16px;
     line-height: 130%;
     color: var(--dove-color);
+
+    @include tablet {
+      margin-bottom: 23px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__link {
+    @include tablet {
+      padding: 17px 33px;
+    }
 
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+    @include mobile {
+      padding: 10px 23px;
     }
   }
 
   &__rating {
     top: 30px;
     left: 30px;
+
+    @include mobile {
+      top: 17px;
+      left: 16px;
+    }
   }
+
 }
 
 .product-rating {
@@ -77,10 +124,20 @@
   line-height: 130%;
   color: var(--secondary-accent-color);
 
+  @include mobile {
+    font-size: 12px;
+  }
+
   &__icon {
     width: 15px;
     height: 15px;
     margin-right: 7px;
     fill: currentColor;
+
+    @include mobile {
+      width: 13px;
+      height: 12px;
+    }
   }
+
 }

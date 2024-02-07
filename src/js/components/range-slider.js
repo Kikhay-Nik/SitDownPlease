@@ -1,6 +1,7 @@
 import noUiSlider from "../../../node_modules/nouislider/dist/nouislider.min.mjs";
 
 const rangeSlider = document.getElementById("range-slider-line");
+const formatValue = (n) => new Intl.NumberFormat("ru-RU").format(n);
 
 if (rangeSlider) {
   noUiSlider.create(rangeSlider, {
@@ -24,6 +25,11 @@ if (rangeSlider) {
 
   rangeSlider.noUiSlider.on("update", function (values, handle) {
     inputs[handle].value = Math.round(values[handle]);
+    const priceTag = document.querySelector(".tag--price");
+    if (priceTag) {
+      const tagText = priceTag?.querySelector(".tag__text");
+      tagText.innerHTML = `до ${formatValue(inputMax.value)}`;
+    }
   });
 
   const setRangeValue = (i, value) => {

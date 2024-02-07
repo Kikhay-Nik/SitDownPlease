@@ -1,16 +1,19 @@
 <div class="filter">
   <h3 class="filter__title filter__title--price">Цена</h3>
-  <div class="filter__range-slider range-slider">
-    <div class="range-slider__inner">
-      <label class="range-slider__label">
-        <span class="range-slider__text">от</span>
-        <input class="range-slider__input" type="number" id="input-min" min="0" max="220000">
-      </label>
-      <label class="range-slider__label">
-        <span class="range-slider__text">до</span>
-        <input class="range-slider__input" type="number" id="input-max" min="0" max="220000">
-      </label>
+  <button class="filter__btn btn-reset">Цена</button>
+  <div class="filter__dropdown">
+    <div class="filter__range-slider range-slider range-slider--price">
+      <div class="range-slider__inner">
+        <label class="range-slider__label">
+          <span class="range-slider__text">от</span>
+          <input class="range-slider__input" type="number" id="input-min" min="0" max="220000">
+        </label>
+        <label class="range-slider__label">
+          <span class="range-slider__text">до</span>
+          <input class="range-slider__input" type="number" id="input-max" min="0" max="220000">
+        </label>
+      </div>
+      <div class="range-slider__slider-line" id="range-slider-line"></div>
     </div>
-    <div class="range-slider__slider-line" id="range-slider-line"></div>
   </div>
 </div>

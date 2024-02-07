@@ -1,5 +1,5 @@
 <div class="slider-container">
-  <div class="swiper large-image">
+  <div class="swiper modal-large-image large-image">
     <ul class="swiper-wrapper list-reset">
       <li class="swiper-slide">
         <button class="large-image__button product-modal-button btn-reset">
@@ -13,7 +13,7 @@
       </li>
       <li class="swiper-slide">
         <button class="large-image__button product-modal-button btn-reset">
-          <img src="./img/large-product-3.png" alt="Фото диван тканевый D-31" width="450" height="418">
+          <img class="product-image-mobile-resize" src="./img/large-product-3.png" alt="Фото диван тканевый D-31" width="450" height="418">
         </button>
       </li>
       <li class="swiper-slide">
@@ -28,33 +28,47 @@
       </li>
     </ul>
   </div>
-  <div class="swiper thumb-image">
-    <ul class="swiper-wrapper list-reset">
-      <li class="swiper-slide">
-        <button class="thumb-image__button btn-reset">
-          <img src="./img/product-modal-thumb-1.png" alt="Превью фото дивана D-31" width="290" height="126">
-        </button>
-      </li>
-      <li class="swiper-slide">
-        <button class="thumb-image__button btn-reset">
-          <img src="./img/product-modal-thumb-2.png" alt="Превью фото дивана D-31" width="253" height="126">
-        </button>
-      </li>
-      <li class="swiper-slide">
-        <button class="thumb-image__button btn-reset">
-          <img src="./img/product-modal-thumb-3.png" alt="Превью фото дивана D-31" width="135" height="126">
-        </button>
-      </li>
-      <li class="swiper-slide">
-        <button class="thumb-image__button btn-reset">
-          <img src="./img/product-modal-thumb-4.png" alt="Превью фото дивана D-31" width="275" height="126">
-        </button>
-      </li>
-      <li class="swiper-slide">
-        <button class="thumb-image__button btn-reset">
-          <img src="./img/product-modal-thumb-5.png" alt="Превью фото дивана D-31" width="281" height="126">
-        </button>
-      </li>
-    </ul>
+  <div class="small-slider-wrapper">
+    <div class="swiper-navigation center-swiper-navigination">
+      <button class="swiper-button-prev product-button-prev btn-reset circle-swiper-btn">
+        <svg class="circle-swiper-btn__icon">
+          <use xlink:href="img/sprite.svg#arrow-left"></use>
+        </svg>
+      </button>
+      <button class="swiper-button-next product-button-next btn-reset circle-swiper-btn">
+        <svg class="circle-swiper-btn__icon">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="swiper modal-thumb-image thumb-image">
+      <ul class="swiper-wrapper list-reset">
+        <li class="swiper-slide">
+          <button class="thumb-image__button btn-reset">
+            <img src="./img/product-modal-thumb-1.png" alt="Превью фото дивана D-31" width="290" height="126">
+          </button>
+        </li>
+        <li class="swiper-slide">
+          <button class="thumb-image__button btn-reset">
+            <img src="./img/product-modal-thumb-2.png" alt="Превью фото дивана D-31" width="253" height="126">
+          </button>
+        </li>
+        <li class="swiper-slide">
+          <button class="thumb-image__button btn-reset">
+            <img class="product-image-mobile-resize" src="./img/product-modal-thumb-3.png" alt="Превью фото дивана D-31" width="135" height="126">
+          </button>
+        </li>
+        <li class="swiper-slide">
+          <button class="thumb-image__button btn-reset">
+            <img src="./img/product-modal-thumb-4.png" alt="Превью фото дивана D-31" width="275" height="126">
+          </button>
+        </li>
+        <li class="swiper-slide">
+          <button class="thumb-image__button btn-reset">
+            <img src="./img/product-modal-thumb-5.png" alt="Превью фото дивана D-31" width="281" height="126">
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

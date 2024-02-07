@@ -49,6 +49,12 @@
     line-height: 19px;
     color: var(--text-color);
 
+    @include mobile {
+      margin-right: 3px;
+      padding-left: 21px;
+      font-size: 12px;
+    }
+
     &::before {
       width: 14px;
       height: 14px;

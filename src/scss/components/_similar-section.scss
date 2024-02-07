@@ -2,6 +2,14 @@
   padding-top: 20px;
   padding-bottom: 69px;
 
+  @include tablet {
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-bottom: 117px;
+  }
+
   &__container {
     position: relative;
   }
@@ -10,5 +18,22 @@
     margin-bottom: 24px;
     padding-left: 2px;
     font-weight: 400;
+  }
+
+  &__swiper {
+    & .swiper-slide {
+      box-sizing: border-box;
+    }
+
+  }
+
+  & .swiper-navigation {
+    @include mobile {
+      top: auto;
+      right: 50%;
+      bottom: -14%;
+      @include flex-v-center;
+      transform: translateX(50%);
+    }
   }
 }

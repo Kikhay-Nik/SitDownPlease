@@ -1,16 +1,53 @@
 .product {
   margin-bottom: 60px;
 
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 11px;
+  }
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+
   &__info {
     margin-bottom: 32px;
+
+    @include mobile {
+      row-gap: 16px;
+      margin-bottom: 24px;
+    }
   }
 
   &__image-wrapper {
     grid-column: 6 span;
 
+    @include tablet {
+      grid-column: 5 span;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      padding-top: 13px;
+    }
+
     & .swiper-slide {
       @include flex-all-center;
       width: fit-content;
+
+      @include small-tablet {
+        width: 100%;
+      }
+
+      @include mobile {
+        width: auto;
+      }
     }
   }
 
@@ -18,25 +55,112 @@
     max-height: 245px;
     margin-bottom: 16px;
 
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 17px;
+    }
+
     &__button {
       cursor: zoom-in;
+
+      @include small-tablet {
+        width: 100%;
+      }
+
+      & img {
+        @include tablet {
+          width: 100%;
+        }
+
+        @include small-tablet {
+          width: auto;
+          height: 245px;
+        }
+
+        @include big-mobile {
+          height: auto;
+        }
+
+        @include mobile {
+          max-height: 115px;
+        }
+      }
     }
   }
 
   & .thumb-image {
     max-height: 81px;
     padding: 10px 25px;
+
+    @include tablet {
+      padding: 10px;
+    }
+
+    @include small-tablet {
+      width: 187px;
+      max-height: 349px;
+      margin: 0;
+      padding: 25px;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-height: none;
+      padding: 10px;
+    }
+
+    & .swiper-slide {
+      @include small-tablet {
+        max-height: 61px;
+      }
+    }
   }
 
   &__content-wrapper {
     grid-column: 4 span;
+
+    @include small-tablet {
+      position: absolute;
+      top: 78%;
+      left: 38%;
+      margin-top: 6px;
+    }
+
+    @include mobile {
+      position: static;
+      grid-column: 6 span;
+      margin-top: 0;
+    }
   }
 
   &__additional {
     grid-column: 6 span;
+
+    @include tablet {
+      grid-column: 5 span;
+    }
+
+    @include mobile {
+      grid-column: 6 span;
+    }
   }
 
   &__specification {
     grid-column: 6 span;
+
+    @include tablet {
+      grid-column: 4 span;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
   }
 }

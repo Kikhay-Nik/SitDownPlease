@@ -8,3 +8,6 @@ import "./components/range-slider";
 import "./components/product-modal";
 import "./components/product-modal-slider";
 import "./components/map";
+import "./components/catalog-tags"
+import "./components/filter-dropdown"
+import "./components/filter-more-btn"

@@ -1,8 +1,31 @@
 .rating {
   padding-bottom: 69px;
 
+  @include tablet {
+    padding-top: 72px;
+    padding-bottom: 70px;
+  }
+
+  @include mobile {
+    padding-top: 70px;
+  }
+
   &__title {
     margin-bottom: 28px;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+
+    @include mobile {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__products-wrapper {
+    @include mobile {
+      grid-gap: 16px;
+    }
   }
 
   &__product {
@@ -12,6 +35,20 @@
   &__more-btn {
     grid-column: 12 span;
     margin: 0 auto;
+    margin-top: 32px;
     padding: 20px 34px;
+
+    @include tablet {
+      grid-column: 9 span;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      margin-top: 16px;
+    }
   }
 }
+

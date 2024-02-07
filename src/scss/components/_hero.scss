@@ -1,5 +1,10 @@
 .hero__swiper {
   width: 100%;
+
+  @include mobile {
+    height: 210px;
+    margin-bottom: 32px;
+  }
 }
 
 .hero-slide {
@@ -13,6 +18,15 @@
     padding-top: 82px;
     padding-bottom: 80px;
     padding-left: 15px;
+
+    @include tablet {
+      padding-left: 0;
+    }
+
+    @include mobile {
+      padding-top: 30px;
+      padding-left: 18px;
+    }
   }
 
   &__title {
@@ -22,10 +36,32 @@
     font-size: 48px;
     line-height: 65px;
     color: var(--light-text-color);
+
+    @include tablet {
+      margin-bottom: 48px;
+    }
+
+    @include big-mobile {
+      font-size: 38px;
+    }
+
+    @include mobile {
+      margin: 0;
+      font-size: 20px;
+      line-height: 136%;
+    }
   }
 
   &__btn {
     padding: 20px 48px;
+
+    @include big-mobile {
+      padding: 20px 38px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &--contrast {
@@ -42,14 +78,50 @@
 
   &--1 {
     background-image: url(../img/hero-slide-1.jpg);
+
+    @include tablet {
+      background-image: url(../img/hero-slide-1-1024.jpg);
+    }
+
+    @include small-tablet {
+      background-image: url(../img/hero-slide-1-768.jpg);
+    }
+
+    @include mobile {
+      background-image: url(../img/hero-slide-1-320.jpg);
+    }
   }
 
   &--2 {
     background-image: url(../img/hero-slide-2.jpg);
+
+    @include tablet {
+      background-image: url(../img/hero-slide-2-1024.jpg);
+    }
+
+    @include small-tablet {
+      background-image: url(../img/hero-slide-2-768.jpg);
+    }
+
+    @include mobile {
+      background-image: url(../img/hero-slide-2-320.jpg);
+    }
   }
 
   &--3 {
     background-image: url(../img/hero-slide-3.jpg);
+
+    @include tablet {
+      background-image: url(../img/hero-slide-3-1024.jpg);
+    }
+
+    @include small-tablet {
+      background-image: url(../img/hero-slide-3-768.jpg);
+    }
+
+    @include mobile {
+      background-image: url(../img/hero-slide-3-320.jpg);
+    }
   }
 }
 
@@ -57,17 +129,68 @@
   width: 14px;
   height: 14px;
 
+  @include mobile {
+    width: 6px;
+    height: 6px;
+  }
+
   &-active {
-  background: var(--text-color);
+    background: var(--text-color);
   }
 
   &s.swiper-pagination-horizontal {
     bottom: 19px;
+
+    @include mobile {
+      bottom: 7px;
+    }
   }
 }
 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0 8px;
+  background-color: transparent;
+
+  @include mobile {
+    margin: 0 4px;
+  }
 }
 
+.circ {
+  transform: scale(.5) rotate(-90deg);
+  transition: transform .3s ease-in-out;
+}
 
+.circ1 {
+  stroke-dasharray: 440px;
+  stroke-dashoffset: 440px;
+}
+
+.swiper-pagination-bullet:focus-visible:not(:hover):not(:active) .circ {
+  transform: scale(1) rotate(-90deg);
+}
+
+.swiper-pagination-bullet-active .circ {
+  transform: rotate(-90deg);
+}
+
+.swiper-pagination-bullet-active .circ1 {
+  stroke-dashoffset: 220px;
+  transition: linear 10s stroke-dashoffset;
+}
+
+.circ-bg {
+  stroke: var(--light-color);
+}
+
+.hero-mobile-btn {
+  display: none;
+
+  @include mobile {
+    display: block;
+    width: 296px;
+    margin: 0 auto;
+    padding: 20px 30px;
+  }
+}
